@@ -57,7 +57,6 @@ public class main {
 
         Manager man = new Manager(new File("Test.hm"));
         man.writeBin(list);
-        list.clear();
         list = man.readBin();
         System.out.println(list.toString());
 
