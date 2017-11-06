@@ -1,5 +1,6 @@
 package Huffman;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,7 +41,7 @@ public class main {
         }
 
         // Obtener clave
-        ArrayList<String> keys = key(list.extract(0), "", new ArrayList());
+        ArrayList<String> keys = key(list.get(0), "", new ArrayList());
 
         // Formatear
         String formatted = format(text, keys);
@@ -53,6 +54,12 @@ public class main {
 
         // Reformar
         String reformed = reform(decrypted, keys);
+
+        Manager man = new Manager(new File("Test.hm"));
+        man.writeBin(list);
+        list.clear();
+        list = man.readBin();
+        System.out.println(list.toString());
 
     }
 

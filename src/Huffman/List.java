@@ -11,6 +11,7 @@ public class List<T extends Object> implements Cloneable, Serializable {
 
     protected boolean sorted = false;
     protected ArrayList<T> list;
+        private static final long serialVersionUID = 1L;
 
     public List(ArrayList<T> list) {
         this.list = list;

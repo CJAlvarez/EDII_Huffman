@@ -2,7 +2,7 @@ package Huffman;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
+    
 /**
  *
  * @author CJ
@@ -27,6 +27,8 @@ public class Tree implements Serializable {
     public final int SIMETRIC = 2;
     /* Visto. */
     private boolean seen = false;
+
+    private static final long serialVersionUID = 2L;
 
     /**
      *
